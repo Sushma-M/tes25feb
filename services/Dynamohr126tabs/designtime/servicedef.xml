@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="Dynamohr126tabs" type="DataService" springFile="Dynamohr126tabs.spring.xml">
+    <dataobjects>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.User">
+            <element name="payrollsForFkUserConfirmation" typeRef="com.test_25feb.dynamohr126tabs.Payroll" isList="true" allowNull="true"/>
+            <element name="payrollsForFkUserPrints" typeRef="com.test_25feb.dynamohr126tabs.Payroll" isList="true" allowNull="true"/>
+            <element name="logs" typeRef="com.test_25feb.dynamohr126tabs.Log" isList="true" allowNull="true"/>
+            <element name="employeeMessagesForFkUserSends" typeRef="com.test_25feb.dynamohr126tabs.EmployeeMessage" isList="true" allowNull="true"/>
+            <element name="paymentChecks" typeRef="com.test_25feb.dynamohr126tabs.PaymentCheck" isList="true" allowNull="true"/>
+            <element name="payrollsForFkUserElaborate" typeRef="com.test_25feb.dynamohr126tabs.Payroll" isList="true" allowNull="true"/>
+            <element name="employeeAssessments" typeRef="com.test_25feb.dynamohr126tabs.EmployeeAssessment" isList="true" allowNull="true"/>
+            <element name="identityNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="password" typeRef="java.lang.String" allowNull="true"/>
+            <element name="country" typeRef="com.test_25feb.dynamohr126tabs.Country" allowNull="true"/>
+            <element name="applicantNotes" typeRef="com.test_25feb.dynamohr126tabs.ApplicantNote" isList="true" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="employeeMessagesForFkUserReceive" typeRef="com.test_25feb.dynamohr126tabs.EmployeeMessage" isList="true" allowNull="true"/>
+            <element name="role" typeRef="com.test_25feb.dynamohr126tabs.Role" allowNull="true"/>
+            <element name="idUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userFullname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="login" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.PayrollDetail">
+            <element name="listPeriodicBonusPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListPeriodicBonusPayroll" isList="true" allowNull="true"/>
+            <element name="payroll" typeRef="com.test_25feb.dynamohr126tabs.Payroll" allowNull="true"/>
+            <element name="listLoanDetailPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListLoanDetailPayroll" isList="true" allowNull="true"/>
+            <element name="netSalary" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="totalExpenditures" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="bonusEventuals" typeRef="com.test_25feb.dynamohr126tabs.BonusEventual" isList="true" allowNull="true"/>
+            <element name="paymentChecks" typeRef="com.test_25feb.dynamohr126tabs.PaymentCheck" isList="true" allowNull="true"/>
+            <element name="deductionEventuals" typeRef="com.test_25feb.dynamohr126tabs.DeductionEventual" isList="true" allowNull="true"/>
+            <element name="typeGenerationForm" typeRef="com.test_25feb.dynamohr126tabs.TypeGenerationForm" allowNull="true"/>
+            <element name="basicSalary" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="listPeriodicDeductionPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListPeriodicDeductionPayroll" isList="true" allowNull="true"/>
+            <element name="listOvertimePayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListOvertimePayroll" isList="true" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+            <element name="creationDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="totalIncome" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="listTravelExpenseDetails" typeRef="com.test_25feb.dynamohr126tabs.ListTravelExpenseDetail" isList="true" allowNull="true"/>
+            <element name="increasedIncomeOutflow" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="typeEmployeePaymentMethod" typeRef="com.test_25feb.dynamohr126tabs.TypeEmployeePaymentMethod" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listCommissionPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListCommissionPayroll" isList="true" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="idPayrollDetail" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ScheduleFixed">
+            <element name="scheduleFixedDays" typeRef="com.test_25feb.dynamohr126tabs.ScheduleFixedDay" isList="true" allowNull="true"/>
+            <element name="employeeSalaries" typeRef="com.test_25feb.dynamohr126tabs.EmployeeSalary" isList="true" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="lunchTotalTime" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idScheduleFixed" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="totalWorkedWeekHours" typeRef="java.lang.Double" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.RolePermission">
+            <element name="category" typeRef="java.lang.String" allowNull="true"/>
+            <element name="englishLabel" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idRolePermission" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="rolePermissionName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listRolePermissions" typeRef="com.test_25feb.dynamohr126tabs.ListRolePermission" isList="true" allowNull="true"/>
+            <element name="spanishLabel" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeAbsenceJustification">
+            <element name="justifiedAbsenses" typeRef="com.test_25feb.dynamohr126tabs.JustifiedAbsense" isList="true" allowNull="true"/>
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeAbsenceJustification" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeeContract">
+            <element name="startDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idEmployeeContract" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="finalDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.LogOperation">
+            <element name="typeOperationLog" typeRef="com.test_25feb.dynamohr126tabs.TypeOperationLog" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="logs" typeRef="com.test_25feb.dynamohr126tabs.Log" isList="true" allowNull="true"/>
+            <element name="idLogOperation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.WorkPositionScope">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idWorkPositionScope" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="workPosition" typeRef="com.test_25feb.dynamohr126tabs.WorkPosition" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Conf">
+            <element name="idConf" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeeTermination">
+            <element name="terminationDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="reason" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idEmployeeTermination" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="typeEmployeeTermination" typeRef="com.test_25feb.dynamohr126tabs.TypeEmployeeTermination" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeePhotoFile">
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idEmployeePhotoFile" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fileName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="attachment" typeRef="java.lang.String" isList="true" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.CompensatoryDayCredit">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="startPeriodDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="generatedDay" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="endPeriodDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="idCompensatoryDayCredit" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ScheduleFixedDay">
+            <element name="outputTime" typeRef="java.util.Date" allowNull="true"/>
+            <element name="scheduleFixed" typeRef="com.test_25feb.dynamohr126tabs.ScheduleFixed" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="weekDay" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="lunchHourOrder" typeRef="java.util.Date" allowNull="true"/>
+            <element name="lunchStartTime" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idScheduleFixedDay" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="checkIn" typeRef="java.util.Date" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.BadgeEmployee">
+            <element name="userPrinting" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="imprintDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="expirationDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="dateQueue" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="impreso" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="idBadgeEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userQueue" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ApplicantFile">
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="applicantToPosition" typeRef="com.test_25feb.dynamohr126tabs.ApplicantToPosition" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idApplicantFile" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.CompanyDepartment">
+            <element name="idCompanyDepartment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="companyDepartmentByFkSuperiorDepartment" typeRef="com.test_25feb.dynamohr126tabs.CompanyDepartment" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="companyDepartmentsForFkSuperiorDepartment" typeRef="com.test_25feb.dynamohr126tabs.CompanyDepartment" isList="true" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="location" typeRef="com.test_25feb.dynamohr126tabs.Location" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="workPositions" typeRef="com.test_25feb.dynamohr126tabs.WorkPosition" isList="true" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="typeCompanyDepartment" typeRef="com.test_25feb.dynamohr126tabs.TypeCompanyDepartment" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Currency">
+            <element name="listPeriodicBonusPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListPeriodicBonusPayroll" isList="true" allowNull="true"/>
+            <element name="listLoanDetailPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListLoanDetailPayroll" isList="true" allowNull="true"/>
+            <element name="listCommissionEmployees" typeRef="com.test_25feb.dynamohr126tabs.ListCommissionEmployee" isList="true" allowNull="true"/>
+            <element name="enable" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="listPeriodicBonusEmployees" typeRef="com.test_25feb.dynamohr126tabs.ListPeriodicBonusEmployee" isList="true" allowNull="true"/>
+            <element name="idCurrency" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="deductionPeriodics" typeRef="com.test_25feb.dynamohr126tabs.DeductionPeriodic" isList="true" allowNull="true"/>
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="mobileNumbers" typeRef="com.test_25feb.dynamohr126tabs.MobileNumber" isList="true" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="payrolls" typeRef="com.test_25feb.dynamohr126tabs.Payroll" isList="true" allowNull="true"/>
+            <element name="typeExtraHourSegments" typeRef="com.test_25feb.dynamohr126tabs.TypeExtraHourSegment" isList="true" allowNull="true"/>
+            <element name="iso" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listPeriodicDeductionEmployees" typeRef="com.test_25feb.dynamohr126tabs.ListPeriodicDeductionEmployee" isList="true" allowNull="true"/>
+            <element name="bonusEventuals" typeRef="com.test_25feb.dynamohr126tabs.BonusEventual" isList="true" allowNull="true"/>
+            <element name="deductionEventuals" typeRef="com.test_25feb.dynamohr126tabs.DeductionEventual" isList="true" allowNull="true"/>
+            <element name="listPeriodicDeductionPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListPeriodicDeductionPayroll" isList="true" allowNull="true"/>
+            <element name="listOvertimePayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListOvertimePayroll" isList="true" allowNull="true"/>
+            <element name="travelExpenses" typeRef="com.test_25feb.dynamohr126tabs.TravelExpense" isList="true" allowNull="true"/>
+            <element name="overTimeSegmentPayrolls" typeRef="com.test_25feb.dynamohr126tabs.OverTimeSegmentPayroll" isList="true" allowNull="true"/>
+            <element name="loans" typeRef="com.test_25feb.dynamohr126tabs.Loan" isList="true" allowNull="true"/>
+            <element name="payrollDetails" typeRef="com.test_25feb.dynamohr126tabs.PayrollDetail" isList="true" allowNull="true"/>
+            <element name="employeeSalaries" typeRef="com.test_25feb.dynamohr126tabs.EmployeeSalary" isList="true" allowNull="true"/>
+            <element name="listCelphoneDetailPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListCelphoneDetailPayroll" isList="true" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="paymentLoanManuals" typeRef="com.test_25feb.dynamohr126tabs.PaymentLoanManual" isList="true" allowNull="true"/>
+            <element name="listTravelExpenseDetails" typeRef="com.test_25feb.dynamohr126tabs.ListTravelExpenseDetail" isList="true" allowNull="true"/>
+            <element name="isrDetails" typeRef="com.test_25feb.dynamohr126tabs.IsrDetail" isList="true" allowNull="true"/>
+            <element name="listEmployeePhones" typeRef="com.test_25feb.dynamohr126tabs.ListEmployeePhone" isList="true" allowNull="true"/>
+            <element name="listCommissionPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListCommissionPayroll" isList="true" allowNull="true"/>
+            <element name="bonusPeriodics" typeRef="com.test_25feb.dynamohr126tabs.BonusPeriodic" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeeGeneralDetail">
+            <element name="monthlyFinancialClaim" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="dependentNumber" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="personalPhone" typeRef="java.lang.String" allowNull="true"/>
+            <element name="country" typeRef="com.test_25feb.dynamohr126tabs.Country" allowNull="true"/>
+            <element name="cityResidence" typeRef="java.lang.String" allowNull="true"/>
+            <element name="personalMobileNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="socialSecurity" typeRef="java.lang.String" allowNull="true"/>
+            <element name="addressResidence" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="termsOfRecruitment" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idEmployeeGeneralDetail" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeeTraining">
+            <element name="unitDuration" typeRef="java.lang.String" allowNull="true"/>
+            <element name="orderTrainingDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="duration" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="startTrainingDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="approximateDate" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="impartidoPor" typeRef="java.lang.String" allowNull="true"/>
+            <element name="trainingTopic" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idEmployeeTraining" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListPeriodicBonusPayroll">
+            <element name="bonusPeriodic" typeRef="com.test_25feb.dynamohr126tabs.BonusPeriodic" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.test_25feb.dynamohr126tabs.PayrollDetail" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idListPeriodicBonusPayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeIncident">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="incidenceEmployees" typeRef="com.test_25feb.dynamohr126tabs.IncidenceEmployee" isList="true" allowNull="true"/>
+            <element name="idTypeIncident" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="typeIncidentSeverity" typeRef="com.test_25feb.dynamohr126tabs.TypeIncidentSeverity" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.BadgeTemplate">
+            <element name="information" typeRef="java.lang.String" isList="true" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="backgroundDataBehind" typeRef="java.lang.String" isList="true" allowNull="true"/>
+            <element name="idBadgeTemplate" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="dataThumbnailView" typeRef="java.lang.String" isList="true" allowNull="true"/>
+            <element name="backgroundDataFront" typeRef="java.lang.String" isList="true" allowNull="true"/>
+            <element name="templateName" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListTravelExpenseDetail">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="travelExpense" typeRef="com.test_25feb.dynamohr126tabs.TravelExpense" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.test_25feb.dynamohr126tabs.PayrollDetail" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idListTravelExpenseDetail" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.JustifiedAbsense">
+            <element name="absenceDateStart" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="totalJustifiedDays" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="typeAbsenceJustification" typeRef="com.test_25feb.dynamohr126tabs.TypeAbsenceJustification" allowNull="true"/>
+            <element name="absenceDateFinal" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="idJustifiedAbsense" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="justifiedLeaveFiles" typeRef="com.test_25feb.dynamohr126tabs.JustifiedLeaveFile" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Country">
+            <element name="employeeGeneralDetails" typeRef="com.test_25feb.dynamohr126tabs.EmployeeGeneralDetail" isList="true" allowNull="true"/>
+            <element name="users" typeRef="com.test_25feb.dynamohr126tabs.User" isList="true" allowNull="true"/>
+            <element name="idCountry" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="nationality" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="locations" typeRef="com.test_25feb.dynamohr126tabs.Location" isList="true" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="applicantToPositions" typeRef="com.test_25feb.dynamohr126tabs.ApplicantToPosition" isList="true" allowNull="true"/>
+            <element name="codIso1" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="codIso2" typeRef="java.lang.String" allowNull="true"/>
+            <element name="codIso3" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employees" typeRef="com.test_25feb.dynamohr126tabs.Employee" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListAssetReintegrated">
+            <element name="assetReintegrationDocument" typeRef="com.test_25feb.dynamohr126tabs.AssetReintegrationDocument" allowNull="true"/>
+            <element name="idListAssetReintegrated" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="asset" typeRef="com.test_25feb.dynamohr126tabs.Asset" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeeLaborHistory">
+            <element name="occasionOfRetirement" typeRef="java.lang.String" allowNull="true"/>
+            <element name="startDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="idEmployeeLaborHistory" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="charge" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="finalDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="institution" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListPeriodicBonusEmployee">
+            <element name="bonusPeriodic" typeRef="com.test_25feb.dynamohr126tabs.BonusPeriodic" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="typeGenerationForm" typeRef="com.test_25feb.dynamohr126tabs.TypeGenerationForm" allowNull="true"/>
+            <element name="active" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idListPeriodicBonusEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListAssetDiscarded">
+            <element name="idListAssetDiscarded" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="assetDiscardDocument" typeRef="com.test_25feb.dynamohr126tabs.AssetDiscardDocument" allowNull="true"/>
+            <element name="asset" typeRef="com.test_25feb.dynamohr126tabs.Asset" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.BonusEventual">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="reason" typeRef="java.lang.String" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.test_25feb.dynamohr126tabs.PayrollDetail" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+            <element name="idBonusEventual" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ScheduleDynamic">
+            <element name="employeeSalaries" typeRef="com.test_25feb.dynamohr126tabs.EmployeeSalary" isList="true" allowNull="true"/>
+            <element name="outputTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="lunchHourStart" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="idScheduleDynamic" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="lunchHourEnd" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="checkIn" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="hourLunchPaid" typeRef="java.lang.Boolean" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ApplicantNote">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="noteDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="user" typeRef="com.test_25feb.dynamohr126tabs.User" allowNull="true"/>
+            <element name="applicantToPosition" typeRef="com.test_25feb.dynamohr126tabs.ApplicantToPosition" allowNull="true"/>
+            <element name="idApplicantNote" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeIncidentSeverity">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idTypeIncidentSeverity" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeIncidents" typeRef="com.test_25feb.dynamohr126tabs.TypeIncident" isList="true" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeMovement">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employeeFileLocations" typeRef="com.test_25feb.dynamohr126tabs.EmployeeFileLocation" isList="true" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idTypeMovement" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.CompensatoryDayDebit">
+            <element name="idTiempoCompensatorioDiaAcreditado" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="startPeriodDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="generatedDay" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="endPeriodDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListCelphoneDetailPayroll">
+            <element name="payroll" typeRef="com.test_25feb.dynamohr126tabs.Payroll" allowNull="true"/>
+            <element name="impuesto" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="totalValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idListCelphoneDetailPayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="monthlyExpenses" typeRef="java.lang.Float" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="mobileNumber" typeRef="com.test_25feb.dynamohr126tabs.MobileNumber" allowNull="true"/>
+            <element name="invoiceValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="employeeCharge" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="employeeResponsibilities" typeRef="java.lang.String" allowNull="true"/>
+            <element name="companyBonus" typeRef="java.lang.Double" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeRecruitment">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeRecruitment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeGenerationForm" typeRef="com.test_25feb.dynamohr126tabs.TypeGenerationForm" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employees" typeRef="com.test_25feb.dynamohr126tabs.Employee" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeEmployeePaymentMethod">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="payrollDetails" typeRef="com.test_25feb.dynamohr126tabs.PayrollDetail" isList="true" allowNull="true"/>
+            <element name="employeeSalaries" typeRef="com.test_25feb.dynamohr126tabs.EmployeeSalary" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idTypeEmployeeStatus" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListPeriodicDeductionEmployee">
+            <element name="idListPeriodicDeductionEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="typeGenerationForm" typeRef="com.test_25feb.dynamohr126tabs.TypeGenerationForm" allowNull="true"/>
+            <element name="active" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="deductionPeriodic" typeRef="com.test_25feb.dynamohr126tabs.DeductionPeriodic" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListLoanDetailPayroll">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="interestValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="valuePaid" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.test_25feb.dynamohr126tabs.PayrollDetail" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="interestRate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idListLoanDetailPayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="loan" typeRef="com.test_25feb.dynamohr126tabs.Loan" allowNull="true"/>
+            <element name="totalValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TravelExpense">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="travelEmployee" typeRef="com.test_25feb.dynamohr126tabs.TravelEmployee" allowNull="true"/>
+            <element name="justifiedTravelExpenseFiles" typeRef="com.test_25feb.dynamohr126tabs.JustifiedTravelExpenseFile" isList="true" allowNull="true"/>
+            <element name="reason" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeTravellingExpense" typeRef="com.test_25feb.dynamohr126tabs.TypeTravellingExpense" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+            <element name="creationDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="idTravelExpense" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="listTravelExpenseDetails" typeRef="com.test_25feb.dynamohr126tabs.ListTravelExpenseDetail" isList="true" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.AssetReintegrationDocument">
+            <element name="printedNote" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="noteRepaymentDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="listAssetReintegrateds" typeRef="com.test_25feb.dynamohr126tabs.ListAssetReintegrated" isList="true" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idAssetReintegrationDocument" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userDevelops" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.JustifiedLeaveFile">
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idJustifiedLeaveFile" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="justifiedAbsense" typeRef="com.test_25feb.dynamohr126tabs.JustifiedAbsense" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.AssetAssignDocument">
+            <element name="printedNote" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="idAssetAssignDocument" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listAssetLoadeds" typeRef="com.test_25feb.dynamohr126tabs.ListAssetLoaded" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="noteOfficeDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="userDevelops" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeeWorkProof">
+            <element name="cetificationText" typeRef="java.lang.String" allowNull="true"/>
+            <element name="imprintDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idEmployeeWorkProof" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userDevelopment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="uuid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeeFileLocation">
+            <element name="containerNumber" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="dateOfMovement" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="typeMovement" typeRef="com.test_25feb.dynamohr126tabs.TypeMovement" allowNull="true"/>
+            <element name="idEmployeeFileLocation" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeeSalary">
+            <element name="scheduleDynamic" typeRef="com.test_25feb.dynamohr126tabs.ScheduleDynamic" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="biweeklySalary" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="typeGenerationForm" typeRef="com.test_25feb.dynamohr126tabs.TypeGenerationForm" allowNull="true"/>
+            <element name="idEmployeeSalary" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="basicWageHour" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+            <element name="scheduleFixed" typeRef="com.test_25feb.dynamohr126tabs.ScheduleFixed" allowNull="true"/>
+            <element name="monthlySalary" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="active" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="bankAccountNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="bank" typeRef="com.test_25feb.dynamohr126tabs.Bank" allowNull="true"/>
+            <element name="typeEmployeePaymentMethod" typeRef="com.test_25feb.dynamohr126tabs.TypeEmployeePaymentMethod" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.WorkPositionVacant">
+            <element name="applicantToPositionsForFkWorkPositionVacant" typeRef="com.test_25feb.dynamohr126tabs.ApplicantToPosition" isList="true" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="applicantToPositionByFkAspiranteAsignado" typeRef="com.test_25feb.dynamohr126tabs.ApplicantToPosition" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="workPosition" typeRef="com.test_25feb.dynamohr126tabs.WorkPosition" allowNull="true"/>
+            <element name="idWorkPositionVacant" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Announcement">
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="details" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeAnnouncement" typeRef="com.test_25feb.dynamohr126tabs.TypeAnnouncement" allowNull="true"/>
+            <element name="issue" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idAnnouncement" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="highPriority" typeRef="java.lang.Boolean" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Employee">
+            <element name="employeeGeneralDetails" typeRef="com.test_25feb.dynamohr126tabs.EmployeeGeneralDetail" isList="true" allowNull="true"/>
+            <element name="employeeTrainings" typeRef="com.test_25feb.dynamohr126tabs.EmployeeTraining" isList="true" allowNull="true"/>
+            <element name="employeeAssessmentsForFkEvaluatedEmployee" typeRef="com.test_25feb.dynamohr126tabs.EmployeeAssessment" isList="true" allowNull="true"/>
+            <element name="surname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="identityNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="marriageName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="assetAssignDocuments" typeRef="com.test_25feb.dynamohr126tabs.AssetAssignDocument" isList="true" allowNull="true"/>
+            <element name="typeMaritalStatus" typeRef="com.test_25feb.dynamohr126tabs.TypeMaritalStatus" allowNull="true"/>
+            <element name="birthDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employeeTerminations" typeRef="com.test_25feb.dynamohr126tabs.EmployeeTermination" isList="true" allowNull="true"/>
+            <element name="employeeLaborHistories" typeRef="com.test_25feb.dynamohr126tabs.EmployeeLaborHistory" isList="true" allowNull="true"/>
+            <element name="secondSurname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeEmployeeStatus" typeRef="com.test_25feb.dynamohr126tabs.TypeEmployeeStatus" allowNull="true"/>
+            <element name="listPeriodicDeductionEmployees" typeRef="com.test_25feb.dynamohr126tabs.ListPeriodicDeductionEmployee" isList="true" allowNull="true"/>
+            <element name="employeeAssessmentsForFkEvaluatingEmployee" typeRef="com.test_25feb.dynamohr126tabs.EmployeeAssessment" isList="true" allowNull="true"/>
+            <element name="employeeFileLocations" typeRef="com.test_25feb.dynamohr126tabs.EmployeeFileLocation" isList="true" allowNull="true"/>
+            <element name="country" typeRef="com.test_25feb.dynamohr126tabs.Country" allowNull="true"/>
+            <element name="assets" typeRef="com.test_25feb.dynamohr126tabs.Asset" isList="true" allowNull="true"/>
+            <element name="timeSheets" typeRef="com.test_25feb.dynamohr126tabs.TimeSheet" isList="true" allowNull="true"/>
+            <element name="email" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employeeWorkProofs" typeRef="com.test_25feb.dynamohr126tabs.EmployeeWorkProof" isList="true" allowNull="true"/>
+            <element name="isrDetails" typeRef="com.test_25feb.dynamohr126tabs.IsrDetail" isList="true" allowNull="true"/>
+            <element name="overTimeEmployees" typeRef="com.test_25feb.dynamohr126tabs.OverTimeEmployee" isList="true" allowNull="true"/>
+            <element name="vacationDayCredits" typeRef="com.test_25feb.dynamohr126tabs.VacationDayCredit" isList="true" allowNull="true"/>
+            <element name="uuid" typeRef="java.lang.String" allowNull="true"/>
+            <element name="completeRegistration" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="travelEmployees" typeRef="com.test_25feb.dynamohr126tabs.TravelEmployee" isList="true" allowNull="true"/>
+            <element name="vacationDayDebits" typeRef="com.test_25feb.dynamohr126tabs.VacationDayDebit" isList="true" allowNull="true"/>
+            <element name="sex" typeRef="java.lang.String" allowNull="true"/>
+            <element name="scheduleDynamics" typeRef="com.test_25feb.dynamohr126tabs.ScheduleDynamic" isList="true" allowNull="true"/>
+            <element name="listCommissionEmployees" typeRef="com.test_25feb.dynamohr126tabs.ListCommissionEmployee" isList="true" allowNull="true"/>
+            <element name="typeRecruitment" typeRef="com.test_25feb.dynamohr126tabs.TypeRecruitment" allowNull="true"/>
+            <element name="incidenceEmployees" typeRef="com.test_25feb.dynamohr126tabs.IncidenceEmployee" isList="true" allowNull="true"/>
+            <element name="badgeEmployees" typeRef="com.test_25feb.dynamohr126tabs.BadgeEmployee" isList="true" allowNull="true"/>
+            <element name="listPeriodicBonusEmployees" typeRef="com.test_25feb.dynamohr126tabs.ListPeriodicBonusEmployee" isList="true" allowNull="true"/>
+            <element name="assetDischargeDocuments" typeRef="com.test_25feb.dynamohr126tabs.AssetDischargeDocument" isList="true" allowNull="true"/>
+            <element name="employeeWorkDays" typeRef="com.test_25feb.dynamohr126tabs.EmployeeWorkDay" isList="true" allowNull="true"/>
+            <element name="employeePhotoFiles" typeRef="com.test_25feb.dynamohr126tabs.EmployeePhotoFile" isList="true" allowNull="true"/>
+            <element name="secondName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="compensatoryDayDebits" typeRef="com.test_25feb.dynamohr126tabs.CompensatoryDayDebit" isList="true" allowNull="true"/>
+            <element name="employeeEducations" typeRef="com.test_25feb.dynamohr126tabs.EmployeeEducation" isList="true" allowNull="true"/>
+            <element name="employeePersonalReferences" typeRef="com.test_25feb.dynamohr126tabs.EmployeePersonalReference" isList="true" allowNull="true"/>
+            <element name="employeeFiles" typeRef="com.test_25feb.dynamohr126tabs.EmployeeFile" isList="true" allowNull="true"/>
+            <element name="firstName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="applicantToPosition" typeRef="com.test_25feb.dynamohr126tabs.ApplicantToPosition" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="compensatoryDayCredits" typeRef="com.test_25feb.dynamohr126tabs.CompensatoryDayCredit" isList="true" allowNull="true"/>
+            <element name="employeeContracts" typeRef="com.test_25feb.dynamohr126tabs.EmployeeContract" isList="true" allowNull="true"/>
+            <element name="activeEmployee" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="justifiedAbsenses" typeRef="com.test_25feb.dynamohr126tabs.JustifiedAbsense" isList="true" allowNull="true"/>
+            <element name="loans" typeRef="com.test_25feb.dynamohr126tabs.Loan" isList="true" allowNull="true"/>
+            <element name="payrollDetails" typeRef="com.test_25feb.dynamohr126tabs.PayrollDetail" isList="true" allowNull="true"/>
+            <element name="employeeSalaries" typeRef="com.test_25feb.dynamohr126tabs.EmployeeSalary" isList="true" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="listEmployeePositions" typeRef="com.test_25feb.dynamohr126tabs.ListEmployeePosition" isList="true" allowNull="true"/>
+            <element name="workStartDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="listEmployeePhones" typeRef="com.test_25feb.dynamohr126tabs.ListEmployeePhone" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.DetallePlanillaEgresos">
+            <element name="type_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="code" typeRef="java.lang.String" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idPayrollDetail" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Commission">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listCommissionEmployees" typeRef="com.test_25feb.dynamohr126tabs.ListCommissionEmployee" isList="true" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listCommissionPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListCommissionPayroll" isList="true" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idCommission" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeeEducation">
+            <element name="idEmployeeEducation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="title" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeEducation" typeRef="com.test_25feb.dynamohr126tabs.TypeEducation" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="yearRetrieved" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="institution" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.AssetDiscardDocument">
+            <element name="printedNote" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="noteReleaseDiscard" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="listAssetDiscardeds" typeRef="com.test_25feb.dynamohr126tabs.ListAssetDiscarded" isList="true" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idAssetDiscardDocument" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userDevelops" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Alert">
+            <element name="message" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idAlert" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="typeAlert" typeRef="com.test_25feb.dynamohr126tabs.TypeAlert" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="confirmation" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="alertDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.CompanyInfo">
+            <element name="phone" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="website" typeRef="java.lang.String" allowNull="true"/>
+            <element name="direction" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idCompanyInfo" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeGenerationForm">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="payrollDetails" typeRef="com.test_25feb.dynamohr126tabs.PayrollDetail" isList="true" allowNull="true"/>
+            <element name="employeeSalaries" typeRef="com.test_25feb.dynamohr126tabs.EmployeeSalary" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listPeriodicDeductionEmployees" typeRef="com.test_25feb.dynamohr126tabs.ListPeriodicDeductionEmployee" isList="true" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idTypeEmployeePaymentMethod" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listPeriodicBonusEmployees" typeRef="com.test_25feb.dynamohr126tabs.ListPeriodicBonusEmployee" isList="true" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="typeRecruitments" typeRef="com.test_25feb.dynamohr126tabs.TypeRecruitment" isList="true" allowNull="true"/>
+            <element name="payrolls" typeRef="com.test_25feb.dynamohr126tabs.Payroll" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Role">
+            <element name="users" typeRef="com.test_25feb.dynamohr126tabs.User" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idRole" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listRolePermissions" typeRef="com.test_25feb.dynamohr126tabs.ListRolePermission" isList="true" allowNull="true"/>
+            <element name="roleName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeMaritalStatus">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeEmployeeTermination" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="applicantToPositions" typeRef="com.test_25feb.dynamohr126tabs.ApplicantToPosition" isList="true" allowNull="true"/>
+            <element name="employees" typeRef="com.test_25feb.dynamohr126tabs.Employee" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Assessment">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="assessmentFields" typeRef="com.test_25feb.dynamohr126tabs.AssessmentField" isList="true" allowNull="true"/>
+            <element name="idAssessment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userEvaluation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fkWorkPosition" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TimeSheet">
+            <element name="ipMarked" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="markedTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="typeOperationTimesheet" typeRef="com.test_25feb.dynamohr126tabs.TypeOperationTimesheet" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="idTimeSheet" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeCommission">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeCommission" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Month">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idMonth" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeeFile">
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idEmployeeFile" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListCommissionEmployee">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="commissionSalesPercentage" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="active" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="commission" typeRef="com.test_25feb.dynamohr126tabs.Commission" allowNull="true"/>
+            <element name="idListCommissionEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeEmployeePayment">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeEmployeePayment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.IncidenceEmployee">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="incidenceDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idIncidenceEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="typeIncident" typeRef="com.test_25feb.dynamohr126tabs.TypeIncident" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeCellularCompany">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeCellularCompany" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="mobileNumbers" typeRef="com.test_25feb.dynamohr126tabs.MobileNumber" isList="true" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Loan">
+            <element name="quantityPeriods" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listLoanDetailPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListLoanDetailPayroll" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="reason" typeRef="java.lang.String" allowNull="true"/>
+            <element name="collectedLoanWorksheet" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="loanEntireValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="fixedQuota" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="interestRate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idLoan" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+            <element name="paymentLoanManuals" typeRef="com.test_25feb.dynamohr126tabs.PaymentLoanManual" isList="true" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="externalLoan" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="loanPaid" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="loanDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.WorkPositionResponsibility">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="workPosition" typeRef="com.test_25feb.dynamohr126tabs.WorkPosition" allowNull="true"/>
+            <element name="idWorkPositionResponsibility" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.VacationDayCredit">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="startPeriodDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="generatedDay" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idVacationDayCredit" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="endPeriodDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.BonusPeriodic">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listPeriodicBonusPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListPeriodicBonusPayroll" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="suggestedValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="calculations" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listPeriodicBonusEmployees" typeRef="com.test_25feb.dynamohr126tabs.ListPeriodicBonusEmployee" isList="true" allowNull="true"/>
+            <element name="idBonusPeriodic" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Asset">
+            <element name="model" typeRef="java.lang.String" allowNull="true"/>
+            <element name="supplierName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="billNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="rejection" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="listAssetDiscardeds" typeRef="com.test_25feb.dynamohr126tabs.ListAssetDiscarded" isList="true" allowNull="true"/>
+            <element name="seriesNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="assetFiles" typeRef="com.test_25feb.dynamohr126tabs.AssetFile" isList="true" allowNull="true"/>
+            <element name="purchasedValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idAsset" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="listAssetLoadeds" typeRef="com.test_25feb.dynamohr126tabs.ListAssetLoaded" isList="true" allowNull="true"/>
+            <element name="currentlyLoaded" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeAsset" typeRef="com.test_25feb.dynamohr126tabs.TypeAsset" allowNull="true"/>
+            <element name="listAssetReintegrateds" typeRef="com.test_25feb.dynamohr126tabs.ListAssetReintegrated" isList="true" allowNull="true"/>
+            <element name="inventoryNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="assetPhotoFiles" typeRef="com.test_25feb.dynamohr126tabs.AssetPhotoFile" isList="true" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="purchaseDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="listAssetUnloadeds" typeRef="com.test_25feb.dynamohr126tabs.ListAssetUnloaded" isList="true" allowNull="true"/>
+            <element name="brand" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.JustifiedTravelExpenseFile">
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fileName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="travelExpense" typeRef="com.test_25feb.dynamohr126tabs.TravelExpense" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idJustifiedTravelExpenseFile" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListRolePermission">
+            <element name="idListRolePermission" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="role" typeRef="com.test_25feb.dynamohr126tabs.Role" allowNull="true"/>
+            <element name="rolePermission" typeRef="com.test_25feb.dynamohr126tabs.RolePermission" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.WorkPositionRequiement">
+            <element name="idWorkPositionRequiement" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="workPosition" typeRef="com.test_25feb.dynamohr126tabs.WorkPosition" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.AssetDischargeDocument">
+            <element name="printedNote" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="noteReleaseDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idAssetDischargeDocument" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="listAssetUnloadeds" typeRef="com.test_25feb.dynamohr126tabs.ListAssetUnloaded" isList="true" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="userDevelops" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListAssetLoaded">
+            <element name="idListAssetLoaded" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currentlyLoaded" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="assetAssignDocument" typeRef="com.test_25feb.dynamohr126tabs.AssetAssignDocument" allowNull="true"/>
+            <element name="asset" typeRef="com.test_25feb.dynamohr126tabs.Asset" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeAsset">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="assets" typeRef="com.test_25feb.dynamohr126tabs.Asset" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idTypeAsset" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TravelEmployee">
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="viaje" typeRef="com.test_25feb.dynamohr126tabs.Viaje" allowNull="true"/>
+            <element name="tripPurpose" typeRef="java.lang.String" allowNull="true"/>
+            <element name="travelExpenses" typeRef="com.test_25feb.dynamohr126tabs.TravelExpense" isList="true" allowNull="true"/>
+            <element name="idTravelEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.AssetFile">
+            <element name="idAssetFile" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="asset" typeRef="com.test_25feb.dynamohr126tabs.Asset" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeOperationLog">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="logOperations" typeRef="com.test_25feb.dynamohr126tabs.LogOperation" isList="true" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeOperationLog" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListOvertimePayroll">
+            <element name="overTimeSegmentPayrolls" typeRef="com.test_25feb.dynamohr126tabs.OverTimeSegmentPayroll" isList="true" allowNull="true"/>
+            <element name="startTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="idListOvertimePayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="overTimeEmployee" typeRef="com.test_25feb.dynamohr126tabs.OverTimeEmployee" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.test_25feb.dynamohr126tabs.PayrollDetail" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="endTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.PaymentLoanManual">
+            <element name="idPaymentLoanManual" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="interestValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="valuePaid" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="interestRate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="loan" typeRef="com.test_25feb.dynamohr126tabs.Loan" allowNull="true"/>
+            <element name="totalValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeeMessage">
+            <element name="message" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idEmployeeMessage" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="userByFkUserSends" typeRef="com.test_25feb.dynamohr126tabs.User" allowNull="true"/>
+            <element name="issue" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="userByFkUserReceive" typeRef="com.test_25feb.dynamohr126tabs.User" allowNull="true"/>
+            <element name="highPriority" typeRef="java.lang.Boolean" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.DeductionPeriodic">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listPeriodicDeductionEmployees" typeRef="com.test_25feb.dynamohr126tabs.ListPeriodicDeductionEmployee" isList="true" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="suggestedValue" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="calculations" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="listPeriodicDeductionPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListPeriodicDeductionPayroll" isList="true" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idDeductionPeriodic" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeCompanyDepartment">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idTypeCompanyDepartment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="companyDepartments" typeRef="com.test_25feb.dynamohr126tabs.CompanyDepartment" isList="true" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeeWorkDay">
+            <element name="totalOvertime" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="workDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idEmployeeWorkDay" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="totalHoursLate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="totalHoursWorked" typeRef="java.lang.Double" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeTravellingExpense">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idTypeTravellingExpense" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="travelExpenses" typeRef="com.test_25feb.dynamohr126tabs.TravelExpense" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeAnnouncement">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="announcements" typeRef="com.test_25feb.dynamohr126tabs.Announcement" isList="true" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idTypeAnnouncement" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.RateCurrency">
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idRateCurrency" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="rateDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeeAssessment">
+            <element name="assessmentEmployeeDatas" typeRef="com.test_25feb.dynamohr126tabs.AssessmentEmployeeData" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="employeeByFkEvaluatingEmployee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="evaluationDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="workPosition" typeRef="com.test_25feb.dynamohr126tabs.WorkPosition" allowNull="true"/>
+            <element name="user" typeRef="com.test_25feb.dynamohr126tabs.User" allowNull="true"/>
+            <element name="idEmployeeAssessment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employeeByFkEvaluatedEmployee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeApplicantStatus">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="applicantToPositions" typeRef="com.test_25feb.dynamohr126tabs.ApplicantToPosition" isList="true" allowNull="true"/>
+            <element name="idTypeMaritalStatus" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.VacationDayDebit">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idVacationDayDebit" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="startPeriodDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="generatedDay" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="endPeriodDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.WorkPositionPerformanceIndicator">
+            <element name="indicator" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="assessmentFields" typeRef="com.test_25feb.dynamohr126tabs.AssessmentField" isList="true" allowNull="true"/>
+            <element name="idWorkPositionPerformanceIndicator" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="workPosition" typeRef="com.test_25feb.dynamohr126tabs.WorkPosition" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListAssetUnloaded">
+            <element name="asset" typeRef="com.test_25feb.dynamohr126tabs.Asset" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idListAssetUnloaded" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="assetDischargeDocument" typeRef="com.test_25feb.dynamohr126tabs.AssetDischargeDocument" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeEmployeeStatus">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idTypeApplicantStatus" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employees" typeRef="com.test_25feb.dynamohr126tabs.Employee" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.OverTimeEmployee">
+            <element name="startTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idOverTimeEmployee" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="endTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="listOvertimePayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListOvertimePayroll" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListPeriodicDeductionPayroll">
+            <element name="idListPeriodicDeductionPayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.test_25feb.dynamohr126tabs.PayrollDetail" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="deductionPeriodic" typeRef="com.test_25feb.dynamohr126tabs.DeductionPeriodic" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.WorkPosition">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="workPositionRequiements" typeRef="com.test_25feb.dynamohr126tabs.WorkPositionRequiement" isList="true" allowNull="true"/>
+            <element name="workPositionScopes" typeRef="com.test_25feb.dynamohr126tabs.WorkPositionScope" isList="true" allowNull="true"/>
+            <element name="workPositionPerformanceIndicators" typeRef="com.test_25feb.dynamohr126tabs.WorkPositionPerformanceIndicator" isList="true" allowNull="true"/>
+            <element name="workPositionsForFkSuperiorPosition" typeRef="com.test_25feb.dynamohr126tabs.WorkPosition" isList="true" allowNull="true"/>
+            <element name="terminosContrato" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employeeAssessments" typeRef="com.test_25feb.dynamohr126tabs.EmployeeAssessment" isList="true" allowNull="true"/>
+            <element name="workPositionByFkSuperiorPosition" typeRef="com.test_25feb.dynamohr126tabs.WorkPosition" allowNull="true"/>
+            <element name="descripcionFuncionesContrato" typeRef="java.lang.String" allowNull="true"/>
+            <element name="jobDescription" typeRef="java.lang.String" allowNull="true"/>
+            <element name="workPositionResponsibilities" typeRef="com.test_25feb.dynamohr126tabs.WorkPositionResponsibility" isList="true" allowNull="true"/>
+            <element name="postName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="rangoPagoMax" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idWorkPosition" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="rangoPagoMin" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="listEmployeePositions" typeRef="com.test_25feb.dynamohr126tabs.ListEmployeePosition" isList="true" allowNull="true"/>
+            <element name="companyDepartment" typeRef="com.test_25feb.dynamohr126tabs.CompanyDepartment" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="workPositionVacants" typeRef="com.test_25feb.dynamohr126tabs.WorkPositionVacant" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.DeductionEventual">
+            <element name="idDeductionEventual" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="reason" typeRef="java.lang.String" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.test_25feb.dynamohr126tabs.PayrollDetail" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListEmployeePhone">
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idListEmployeePhone" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="active" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="mobileNumber" typeRef="com.test_25feb.dynamohr126tabs.MobileNumber" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="companyBonus" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeAlert">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeAlert" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="alerts" typeRef="com.test_25feb.dynamohr126tabs.Alert" isList="true" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Log">
+            <element name="logOperation" typeRef="com.test_25feb.dynamohr126tabs.LogOperation" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="logId" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="user" typeRef="com.test_25feb.dynamohr126tabs.User" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.RateOvertimeHour">
+            <element name="startTime" typeRef="java.util.Date" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idTypeGenerationForm" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="calculatedBaseSalary" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="extraHourRate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="endTime" typeRef="java.util.Date" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.AssessmentField">
+            <element name="idAssessmentField" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="assessmentEmployeeDatas" typeRef="com.test_25feb.dynamohr126tabs.AssessmentEmployeeData" isList="true" allowNull="true"/>
+            <element name="weight" typeRef="java.lang.Float" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="workPositionPerformanceIndicator" typeRef="com.test_25feb.dynamohr126tabs.WorkPositionPerformanceIndicator" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="code" typeRef="java.lang.String" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="assessment" typeRef="com.test_25feb.dynamohr126tabs.Assessment" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.AssetPhotoFile">
+            <element name="asset" typeRef="com.test_25feb.dynamohr126tabs.Asset" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="mainPhoto" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="filePath" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idAssetPhotoFile" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="fileName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="mimeType" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeOperationTimesheet">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="timeSheets" typeRef="com.test_25feb.dynamohr126tabs.TimeSheet" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idTypeOperationTimesheet" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.DetallePlanillaIngresos">
+            <element name="type_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="description_" typeRef="java.lang.String" allowNull="true"/>
+            <element name="code" typeRef="java.lang.String" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idPayrollDetail" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListCommissionPayroll">
+            <element name="collectionNet" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="commissionChargePercentage" typeRef="java.lang.Float" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.test_25feb.dynamohr126tabs.PayrollDetail" allowNull="true"/>
+            <element name="commissionValueCharged" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="commission" typeRef="com.test_25feb.dynamohr126tabs.Commission" allowNull="true"/>
+            <element name="idListCommissionPayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ListEmployeePosition">
+            <element name="endPossessionDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="workPosition" typeRef="com.test_25feb.dynamohr126tabs.WorkPosition" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="currentPosition" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="startPossessionDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="idListEmployeePosition" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.MobileNumber">
+            <element name="typeCellularCompany" typeRef="com.test_25feb.dynamohr126tabs.TypeCellularCompany" allowNull="true"/>
+            <element name="listCelphoneDetailPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListCelphoneDetailPayroll" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="listEmployeePhones" typeRef="com.test_25feb.dynamohr126tabs.ListEmployeePhone" isList="true" allowNull="true"/>
+            <element name="number" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="idCellphone" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="companyValueBond" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.IsrDetail">
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idIsrDetail" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="debit" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeEducation">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employeeEducations" typeRef="com.test_25feb.dynamohr126tabs.EmployeeEducation" isList="true" allowNull="true"/>
+            <element name="idTypeEducation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeEmployeeTermination">
+            <element name="nombre" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idEmployeeTermination" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employeeTerminations" typeRef="com.test_25feb.dynamohr126tabs.EmployeeTermination" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ApplicantToPosition">
+            <element name="applicantFiles" typeRef="com.test_25feb.dynamohr126tabs.ApplicantFile" isList="true" allowNull="true"/>
+            <element name="secondSurname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sex" typeRef="java.lang.String" allowNull="true"/>
+            <element name="workPositionVacantsForFkAspiranteAsignado" typeRef="com.test_25feb.dynamohr126tabs.WorkPositionVacant" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="surname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="identityNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="country" typeRef="com.test_25feb.dynamohr126tabs.Country" allowNull="true"/>
+            <element name="applicantNotes" typeRef="com.test_25feb.dynamohr126tabs.ApplicantNote" isList="true" allowNull="true"/>
+            <element name="marriageName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="workPositionVacantByFkWorkPositionVacant" typeRef="com.test_25feb.dynamohr126tabs.WorkPositionVacant" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="email" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeMaritalStatus" typeRef="com.test_25feb.dynamohr126tabs.TypeMaritalStatus" allowNull="true"/>
+            <element name="idApplicantToPosition" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="secondName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="birthDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="applicantAppointments" typeRef="com.test_25feb.dynamohr126tabs.ApplicantAppointment" isList="true" allowNull="true"/>
+            <element name="firstName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="typeApplicantStatus" typeRef="com.test_25feb.dynamohr126tabs.TypeApplicantStatus" allowNull="true"/>
+            <element name="employees" typeRef="com.test_25feb.dynamohr126tabs.Employee" isList="true" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Payroll">
+            <element name="startDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="imprintDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="userByFkUserPrints" typeRef="com.test_25feb.dynamohr126tabs.User" allowNull="true"/>
+            <element name="finalDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="confirmationDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="typeGenerationForm" typeRef="com.test_25feb.dynamohr126tabs.TypeGenerationForm" allowNull="true"/>
+            <element name="idPayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="impresa" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+            <element name="payrollDetails" typeRef="com.test_25feb.dynamohr126tabs.PayrollDetail" isList="true" allowNull="true"/>
+            <element name="listCelphoneDetailPayrolls" typeRef="com.test_25feb.dynamohr126tabs.ListCelphoneDetailPayroll" isList="true" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="confirmation" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="userByFkUserElaborate" typeRef="com.test_25feb.dynamohr126tabs.User" allowNull="true"/>
+            <element name="developmentDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="userByFkUserConfirmation" typeRef="com.test_25feb.dynamohr126tabs.User" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Bank">
+            <element name="noSwift" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employeeSalaries" typeRef="com.test_25feb.dynamohr126tabs.EmployeeSalary" isList="true" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idBank" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="direction" typeRef="java.lang.String" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="contact" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Location">
+            <element name="phone" typeRef="java.lang.String" allowNull="true"/>
+            <element name="fax" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="department" typeRef="java.lang.String" allowNull="true"/>
+            <element name="direction" typeRef="java.lang.String" allowNull="true"/>
+            <element name="code" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="country" typeRef="com.test_25feb.dynamohr126tabs.Country" allowNull="true"/>
+            <element name="city" typeRef="java.lang.String" allowNull="true"/>
+            <element name="registrationNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="companyDepartments" typeRef="com.test_25feb.dynamohr126tabs.CompanyDepartment" isList="true" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.Viaje">
+            <element name="budget" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="travelDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="travelMotive" typeRef="java.lang.String" allowNull="true"/>
+            <element name="returnDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="idTravel" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="travelEmployees" typeRef="com.test_25feb.dynamohr126tabs.TravelEmployee" isList="true" allowNull="true"/>
+            <element name="destination" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.PaymentCheck">
+            <element name="amount" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="creationDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="imprintDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="idPaymentCheck" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="payrollDetail" typeRef="com.test_25feb.dynamohr126tabs.PayrollDetail" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="noCheque" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="impreso" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="user" typeRef="com.test_25feb.dynamohr126tabs.User" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.TypeExtraHourSegment">
+            <element name="overTimeSegmentPayrolls" typeRef="com.test_25feb.dynamohr126tabs.OverTimeSegmentPayroll" isList="true" allowNull="true"/>
+            <element name="startTime" typeRef="java.util.Date" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="rate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="idTypeExtraHourSegment" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="endTime" typeRef="java.util.Date" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.OverTimeSegmentPayroll">
+            <element name="idOverTimeSegmentPayroll" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="hoursByRate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="listOvertimePayroll" typeRef="com.test_25feb.dynamohr126tabs.ListOvertimePayroll" allowNull="true"/>
+            <element name="hourDifference" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="endTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="currency" typeRef="com.test_25feb.dynamohr126tabs.Currency" allowNull="true"/>
+            <element name="startTime" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="typeExtraHourSegment" typeRef="com.test_25feb.dynamohr126tabs.TypeExtraHourSegment" allowNull="true"/>
+            <element name="rate" typeRef="java.lang.Double" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.EmployeePersonalReference">
+            <element name="idEmployeePersonalReference" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="secondSurname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="sex" typeRef="java.lang.String" allowNull="true"/>
+            <element name="phone" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="direction" typeRef="java.lang.String" allowNull="true"/>
+            <element name="surname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employeeRelationship" typeRef="java.lang.String" allowNull="true"/>
+            <element name="emergencyContact" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="marriageName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="email" typeRef="java.lang.String" allowNull="true"/>
+            <element name="secondName" typeRef="java.lang.String" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.test_25feb.dynamohr126tabs.Employee" allowNull="true"/>
+            <element name="mobileNumber" typeRef="java.lang.String" allowNull="true"/>
+            <element name="firstName" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.AssessmentEmployeeData">
+            <element name="employeeAssessment" typeRef="com.test_25feb.dynamohr126tabs.EmployeeAssessment" allowNull="true"/>
+            <element name="idAssessmentEmployeeData" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modDate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="assessmentField" typeRef="com.test_25feb.dynamohr126tabs.AssessmentField" allowNull="true"/>
+            <element name="modLocation" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="modUser" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="value_" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+        <dataobject javaType="com.test_25feb.dynamohr126tabs.ApplicantAppointment">
+            <element name="startDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="textColor" typeRef="java.lang.String" allowNull="true"/>
+            <element name="observation" typeRef="java.lang.String" allowNull="true"/>
+            <element name="confirmationDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="finalDate" typeRef="org.joda.time.LocalDateTime" allowNull="true"/>
+            <element name="confirmation" typeRef="java.lang.Boolean" allowNull="true"/>
+            <element name="applicantToPosition" typeRef="com.test_25feb.dynamohr126tabs.ApplicantToPosition" allowNull="true"/>
+            <element name="nameEvent" typeRef="java.lang.String" allowNull="true"/>
+            <element name="idApplicantAppointment" typeRef="java.lang.Integer" allowNull="true"/>
+        </dataobject>
+    </dataobjects>
+</service>

@@ -1,0 +1,22 @@
+{
+  "username" : "root",
+  "password" : "7b6a43524a2621157e686d791a50777e47367b6a3120",
+  "url" : "jdbc:mysql://ec2-54-87-2-36.compute-1.amazonaws.com:3306/Dynamohr126tabs?useUnicode=yes&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull",
+  "driverClass" : "com.mysql.jdbc.Driver",
+  "dialect" : "com.wavemaker.runtime.data.dialect.MySQLDialect",
+  "serviceId" : "Dynamohr126tabs",
+  "packageName" : "com.test_25feb.dynamohr126tabs",
+  "dbType" : "MySQL",
+  "host" : "ec2-54-87-2-36.compute-1.amazonaws.com",
+  "dbName" : "Dynamohr126tabs",
+  "port" : "3306",
+  "schemaName" : null,
+  "tableFilter" : [ "alert", "announcement", "applicant_appointment", "applicant_file", "applicant_note", "applicant_to_position", "assessment", "assessment_employee_data", "assessment_field", "asset", "asset_assign_document", "asset_discard_document", "asset_discharge_document", "asset_file", "asset_photo_file", "asset_reintegration_document", "badge_employee", "badge_template", "bank", "bonus_eventual", "bonus_periodic", "commission", "company_department", "company_info", "compensatory_day_credit", "compensatory_day_debit", "conf", "country", "currency", "deduction_eventual", "deduction_periodic", "detalle_planilla_egresos", "detalle_planilla_ingresos", "employee", "employee_assessment", "employee_contract", "employee_education", "employee_file", "employee_file_location", "employee_general_detail", "employee_labor_history", "employee_message", "employee_personal_reference", "employee_photo_file", "employee_salary", "employee_termination", "employee_training", "employee_work_day", "employee_work_proof", "incidence_employee", "isr_detail", "justified_absense", "justified_leave_file", "justified_travel_expense_file", "list_asset_discarded", "list_asset_loaded", "list_asset_reintegrated", "list_asset_unloaded", "list_celphone_detail_payroll", "list_commission_employee", "list_commission_payroll", "list_employee_phone", "list_employee_position", "list_loan_detail_payroll", "list_overtime_payroll", "list_periodic_bonus_employee", "list_periodic_bonus_payroll", "list_periodic_deduction_employee", "list_periodic_deduction_payroll", "list_role_permission", "list_travel_expense_detail", "loan", "location", "log", "log_operation", "mobile_number", "month", "over_time_employee", "over_time_segment_payroll", "payment_check", "payment_loan_manual", "payroll", "payroll_detail", "rate_currency", "rate_overtime_hour", "role", "role_permission", "schedule_dynamic", "schedule_fixed", "schedule_fixed_day", "time_sheet", "travel_employee", "travel_expense", "type_absence_justification", "type_alert", "type_announcement", "type_applicant_status", "type_asset", "type_cellular_company", "type_commission", "type_company_department", "type_education", "type_employee_payment", "type_employee_payment_method", "type_employee_status", "type_employee_termination", "type_extra_hour_segment", "type_generation_form", "type_incident", "type_incident_severity", "type_marital_status", "type_movement", "type_operation_log", "type_operation_timesheet", "type_recruitment", "type_travelling_expense", "user", "vacation_day_credit", "vacation_day_debit", "viaje", "work_position", "work_position_performance_indicator", "work_position_requiement", "work_position_responsibility", "work_position_scope", "work_position_vacant" ],
+  "schemaFilter" : [ ".*" ],
+  "impersonateUser" : false,
+  "activeDirectoryDomain" : null,
+  "hbm2ddl" : "none",
+  "maxPageSize" : 100,
+  "dataSourceType" : "WM_MANAGED_DATASOURCE",
+  "jndiName" : ""
+}
