@@ -1,4 +1,79 @@
 {
+  "appNotification" : {
+    "_id" : "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
+    "name" : "appNotification",
+    "owner" : "App",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "class",
+      "value" : "Error",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "GoogleapisInvoke" : {
+    "_id" : "wm-GoogleapisInvoke-wm.ServiceVariable-1456384505862",
+    "name" : "GoogleapisInvoke",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "origin",
+      "value" : "bind:Widgets.googlemaps1.origin",
+      "type" : "string"
+    }, {
+      "target" : "destination",
+      "value" : "bind:Widgets.googlemaps1.destination",
+      "type" : "string"
+    }, {
+      "target" : "sensor",
+      "value" : "false",
+      "type" : "string"
+    } ],
+    "type" : "googleapis.DirectionsResponse",
+    "service" : "googleapis",
+    "operation" : "invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/googleapis/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "consumes" : [ "text/xml" ],
+      "parameters" : [ {
+        "name" : "sensor",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "origin",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "destination",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "RestServiceVirtual",
+    "spinnerContext" : "page",
+    "spinnerMessage" : "testtt"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",
@@ -18,24 +93,5 @@
     "type" : "string",
     "isList" : false,
     "saveInPhonegap" : false
-  },
-  "appNotification": {
-      "_id": "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
-      "name": "appNotification",
-      "owner": "App",
-      "category": "wm.NotificationVariable",
-      "dataBinding": [
-        {
-          "target": "class",
-          "value": "Error",
-          "type": "list"
-        },
-        {
-          "target": "toasterPosition",
-          "value": "bottom right",
-          "type": "list"
-        }
-      ],
-      "operation": "toast"
-    }
+  }
 }

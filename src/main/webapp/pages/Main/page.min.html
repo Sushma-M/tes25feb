@@ -34,6 +34,28 @@ var _MainPage_Variables_ ={};
     <wm-content name="content">
         <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
         <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1">
+                    <wm-tabheader name="tabheader1"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent1">
+                        <wm-composite name="composite1">
+                            <wm-label class="col-md-3 control-label" name="label1"></wm-label>
+                            <wm-container class="col-md-9" name="container1">
+                                <wm-text name="text1"></wm-text>
+                            </wm-container>
+                        </wm-composite>
+                        <wm-composite name="composite2">
+                            <wm-label class="col-md-3 control-label" name="label2"></wm-label>
+                            <wm-container class="col-md-9" name="container2">
+                                <wm-text name="text2"></wm-text>
+                            </wm-container>
+                        </wm-composite>
+                        <wm-button class="btn-default" caption="Button" type="button" name="button1" on-click="GoogleapisInvoke"></wm-button>
+                        <wm-label name="label3" caption="bind:Variables.GoogleapisInvoke.dataSet.route.leg.distance.text"></wm-label>
+                    </wm-tabcontent>
+                </wm-tabpane>
+            </wm-tabs>
+            <wm-prefab prefabname="googlemaps" name="googlemaps1" origin="bind:Widgets.text1.datavalue" destination="bind:Widgets.text2.datavalue" locations="bind:Variables.GoogleapisInvoke.dataSet.route.leg.step" lat="start_location.lat" lng="end_location.lng"></wm-prefab>
         </wm-page-content>
         <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
